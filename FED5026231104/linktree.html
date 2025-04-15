@@ -29,6 +29,9 @@
         width: 100%;
       }
       @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+      .navbar > .btn:hover {
+        background-color: #407f95 !important;
+      }
       .profile-title {
         font-family: "Inter", sans-serif;
         font-weight: 700;
@@ -39,9 +42,26 @@
         font-weight: 400;
         font-size: 16px;
       }
+      .icon {
+        transition: transform 0.2s;
+      }
+      .icon:hover {
+        -ms-transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+      }
       .link-container {
         font-family: "Inter", sans-serif;
         font-size: 16px;
+        .btn:hover {
+          background-color: white !important;
+          .textdsc {
+            color: #0b2590 !important;
+          }
+          .threedots {
+            color: #0b2590 !important;
+          }
+        }
       }
       .btn {
         font-size: 16px;
@@ -54,10 +74,12 @@
       style="
         background: linear-gradient(
           to bottom,
-          #49a5bf,
-          #2252a1,
-          #153897,
-          #040827
+          #4ba8c0,
+          #4193b9,
+          #3880b2,
+          #2e6cab,
+          #1c489d,
+          #0b2590
         );
         background-attachment: fixed;
       "
@@ -70,7 +92,9 @@
           class="btn rounded-circle"
           style="background-color: #387084; width: 40px; height: 40px"
         >
-          <div><i class="bi bi-bell text-white"></i></div>
+          <div>
+            <i class="bi bi-bell text-white"></i>
+          </div>
         </button>
         <button
           class="btn rounded-circle"
@@ -90,9 +114,12 @@
           />
         </div>
         <div class="profile-title text-white text-center">@harisenincom</div>
-        <div class="profile-description text-white text-center">
+        <div
+          class="profile-description text-white text-center"
+          style="margin-left: 100px; margin-right: 100px"
+        >
           Explore karir kamu bersama harisenin dan bergabung bersama 5.117
-          alumni lainnya Instagram X LinkedIn TikTok Facebook YouTube
+          alumni lainnya
         </div>
       </div>
       <!-- icon sosmed -->
@@ -100,7 +127,10 @@
         class="icon-socmed d-flex flex-row justify-content-center mx-auto"
         style="width: 600px; padding: 24px"
       >
-        <a href="https://www.instagram.com/harisenin.official" class="mx-2">
+        <a
+          href="https://www.instagram.com/harisenin.official"
+          class="icon mx-2"
+        >
           <svg width="32" height="32" viewBox="0 0 24 24" fill="white">
             <path
               d="M21.938,7.71a7.329,7.329,0,0,0-.456-2.394,4.615,4.615,0,0,0-1.1-1.694,4.61,4.61,0,0,0-1.7-1.1,7.318,7.318,0,0,0-2.393-.456C15.185,2.012,14.817,2,12,2s-3.185.012-4.29.062a7.329,7.329,0,0,0-2.394.456,4.615,4.615,0,0,0-1.694,1.1,4.61,4.61,0,0,0-1.1,1.7A7.318,7.318,0,0,0,2.062,7.71C2.012,8.814,2,9.182,2,12s.012,3.186.062,4.29a7.329,7.329,0,0,0,.456,2.394,4.615,4.615,0,0,0,1.1,1.694,4.61,4.61,0,0,0,1.7,1.1,7.318,7.318,0,0,0,2.393.456c1.1.05,1.472.062,4.29.062s3.186-.012,4.29-.062a7.329,7.329,0,0,0,2.394-.456,4.9,4.9,0,0,0,2.8-2.8,7.318,7.318,0,0,0,.456-2.393c.05-1.1.062-1.472.062-4.29S21.988,8.814,21.938,7.71Zm-1,8.534a6.351,6.351,0,0,1-.388,2.077,3.9,3.9,0,0,1-2.228,2.229,6.363,6.363,0,0,1-2.078.388C15.159,20.988,14.8,21,12,21s-3.159-.012-4.244-.062a6.351,6.351,0,0,1-2.077-.388,3.627,3.627,0,0,1-1.35-.879,3.631,3.631,0,0,1-.879-1.349,6.363,6.363,0,0,1-.388-2.078C3.012,15.159,3,14.8,3,12s.012-3.159.062-4.244A6.351,6.351,0,0,1,3.45,5.679a3.627,3.627,0,0,1,.879-1.35A3.631,3.631,0,0,1,5.678,3.45a6.363,6.363,0,0,1,2.078-.388C8.842,3.012,9.205,3,12,3s3.158.012,4.244.062a6.351,6.351,0,0,1,2.077.388,3.627,3.627,0,0,1,1.35.879,3.631,3.631,0,0,1,.879,1.349,6.363,6.363,0,0,1,.388,2.078C20.988,8.841,21,9.2,21,12S20.988,15.159,20.938,16.244Z"
@@ -113,14 +143,17 @@
             ></path>
           </svg>
         </a>
-        <a href="https://x.com/harisenincom" class="mx-2">
+        <a href="https://x.com/harisenincom" class="icon mx-2">
           <svg width="32" height="32" viewBox="0 0 24 24" fill="white">
             <path
               d="m2.538 3 7.425 9.928L2 21h1.5l7.033-7.067L16 21h5.232l-7.662-9.995 6.955-7.514h-1.5L13 10 7.77 3H2.538Zm1.994 1h2.645l12.087 16h-2.525L4.532 4Z"
             ></path>
           </svg>
         </a>
-        <a href="https://www.linkedin.com/company/harisenin-com" class="mx-2">
+        <a
+          href="https://www.linkedin.com/company/harisenin-com"
+          class="icon mx-2"
+        >
           <svg width="32" height="32" viewBox="0 0 24 24" fill="white">
             <path
               d="M4.425,1.671A2.738,2.738,0,0,0,1.5,4.4,2.71,2.71,0,0,0,4.369,7.128H4.4a2.734,2.734,0,1,0,.028-5.457ZM4.4,6.128H4.369a1.736,1.736,0,1,1,.056-3.457A1.737,1.737,0,1,1,4.4,6.128Z"
@@ -133,14 +166,14 @@
             ></path>
           </svg>
         </a>
-        <a href="https://www.tiktok.com/@harisenincom" class="mx-2">
+        <a href="https://www.tiktok.com/@harisenincom" class="icon mx-2">
           <svg width="32" height="32" viewBox="0 0 24 24" fill="white">
             <path
               d="M9.37,23.5a7.468,7.468,0,0,1,0-14.936.537.537,0,0,1,.538.5v3.8a.542.542,0,0,1-.5.5,2.671,2.671,0,1,0,2.645,2.669.432.432,0,0,1,0-.05V1a.5.5,0,0,1,.5-.5h3.787a.5.5,0,0,1,.5.5A4.759,4.759,0,0,0,21.59,5.76a.5.5,0,0,1,.5.5L22.1,10a.533.533,0,0,1-.519.515,9.427,9.427,0,0,1-4.741-1.268v6.789A7.476,7.476,0,0,1,9.37,23.5ZM8.908,9.585a6.466,6.466,0,1,0,6.93,6.447V8.326a.5.5,0,0,1,.791-.407A8.441,8.441,0,0,0,21.1,9.5l-.006-2.76A5.761,5.761,0,0,1,15.859,1.5H13.051V16.032a.458.458,0,0,1,0,.053,3.672,3.672,0,1,1-4.14-3.695Z"
             ></path>
           </svg>
         </a>
-        <a href="https://www.facebook.com/harisenincom#" class="mx-2">
+        <a href="https://www.facebook.com/harisenincom#" class="icon mx-2">
           <svg width="32" height="32" viewBox="0 0 24 24" fill="white">
             <path
               d="M23,12A11,11,0,1,0,10.279,22.865h0a11.08,11.08,0,0,0,3.436,0h0A10.952,10.952,0,0,0,23,12ZM10.859,21.935v-6.9a.5.5,0,0,0-.5-.5H8.193V12.5h2.166a.5.5,0,0,0,.5-.5V9.686c0-2.278,1.264-3.585,3.459-3.585a15.392,15.392,0,0,1,1.858.137V7.89h-.824l-.019,0a2,2,0,0,0-2.181,1.735,1.8,1.8,0,0,0-.011.4V12a.5.5,0,0,0,.5.5H15.97l-.312,2.035H13.641a.5.5,0,0,0-.5.5v6.9A10.124,10.124,0,0,1,10.859,21.935Zm3.282-.166V15.535h1.946a.5.5,0,0,0,.5-.425l.465-3.035a.5.5,0,0,0-.494-.575H14.141V10.016a1.267,1.267,0,0,1,.308-.821,1.218,1.218,0,0,1,.9-.3h1.324a.5.5,0,0,0,.5-.5V5.806a.5.5,0,0,0-.42-.494A16.661,16.661,0,0,0,14.325,5.1c-2.754,0-4.466,1.757-4.466,4.585V11.5H7.693a.5.5,0,0,0-.5.5v3.035a.5.5,0,0,0,.5.5H9.859v6.234a10,10,0,1,1,4.282,0Z"
@@ -149,7 +182,7 @@
         </a>
         <a
           href="https://www.youtube.com/channel/UCjzbRwULkasMnjTinnzngwg"
-          class="mx-2"
+          class="icon mx-2"
         >
           <svg width="32" height="32" viewBox="0 0 24 24" fill="white">
             <path
@@ -159,7 +192,7 @@
         </a>
         <a
           href="https://api.whatsapp.com/send?phone=6281312117711"
-          class="mx-2"
+          class="icon mx-2"
         >
           <svg width="32" height="32" viewBox="0 0 24 24" fill="white">
             <path
@@ -170,7 +203,7 @@
             ></path>
           </svg>
         </a>
-        <a href="https://t.me/harisenincom" class="mx-2">
+        <a href="https://t.me/harisenincom" class="icon mx-2">
           <svg width="32" height="32" viewBox="0 0 24 24" fill="white">
             <path
               d="M11 0a11 11 0 1011 11A11.012 11.012 0 0011 0zm0 21a10 10 0 1110-10 10.011 10.011 0 01-10 10zm4.464-15.366a2.405 2.405 0 00-.821.155c-.114.047-2.402.985-3.101 1.29L4.489 9.984c-.827.323-1.284.801-1.342 1.416a1.414 1.414 0 00.677 1.298l.097.06.108.038c.044.015 1.091.373 2.01.649a3.527 3.527 0 001.01.156 2.31 2.31 0 001.203-.296l.07-.047-.001.044a1.617 1.617 0 00.602 1.219c.67.566 2.133 1.523 2.836 1.982.15.099.257.168.296.195a3.755 3.755 0 001.939.752 1.71 1.71 0 00.39-.044 1.859 1.859 0 001.34-1.665l.755-4.736.198-1.295c.193-1.254.304-1.98.327-2.31a1.626 1.626 0 00-.388-1.289 1.534 1.534 0 00-1.152-.477zm.027 5.214l-.759 4.765s-.06.698-.576.82a.707.707 0 01-.162.017 2.892 2.892 0 01-1.356-.564c-.121-.091-2.276-1.457-3.065-2.124a.575.575 0 01.03-.972 115.996 115.996 0 003.187-3.034c.236-.236.472-.676.196-.676a2.37 2.37 0 00-.985.494l-4.279 2.883a1.353 1.353 0 01-.673.144 2.514 2.514 0 01-.723-.114c-.91-.273-1.972-.637-1.972-.637s-.729-.456.515-.941l7.071-2.913c.698-.304 3.065-1.275 3.065-1.275a1.44 1.44 0 01.46-.087c.286 0 .592.128.542.694-.03.425-.273 1.912-.516 3.52z"
@@ -180,21 +213,7 @@
       </div>
       <!-- link container -->
       <div class="link-container mx-auto" style="width: 600px">
-        <div
-          class="link-container-title text-center text-white font-weight-bold my-3"
-        >
-          CEK PROMO HARISENIN 🏷️
-        </div>
-        <div>
-          <a
-            href="http://linktr.ee/promobootcamp"
-            target="_blank"
-            class="btn btn-transparant btn-lg btn-block border-white text-white rounded-pill px-3 py-3 my-3"
-          >
-            CEK DAN KLAIM PROMO NYA SEKARANG!
-          </a>
-        </div>
-        <!-- // -->
+        <!-- WEBINAR SECTION -->
         <div
           class="link-container-title text-center text-white font-weight-bold mt-4"
         >
@@ -202,49 +221,105 @@
         </div>
         <div>
           <a
-            href="https://promo.harisenin.com/bookil/fullstack-developer"
+            href="https://promo.harisenin.com/bookil/micrososft-excel"
             target="_blank"
-            class="btn btn-transparant btn-lg btn-block border-white text-white rounded-pill px-3 py-3 mt-3"
+            class="btn btn-transparant btn-lg btn-block border-white text-white rounded-pill px-2 py-2 my-3"
           >
-            Bootcamp Kilat: Full Stack Web Developer
+            <div
+              class="d-flex flex-row align-items-center justify-content-between"
+            >
+              <div
+                class="rounded-circle overflow-hidden"
+                style="width: 46px; height: 46px; flex-shrink: 0"
+              ></div>
+              <div class="textdsc align-item-center">
+                Bootcamp Kilat: Full Stack Web Developer
+              </div>
+              <div>
+                <i class="threedots bi bi-three-dots-vertical"></i>
+              </div>
+            </div>
           </a>
         </div>
         <div>
           <a
             href="https://promo.harisenin.com/bookil/micrososft-excel"
             target="_blank"
-            class="btn btn-transparant btn-lg btn-block border-white text-white rounded-pill px-3 py-3 mt-3"
+            class="btn btn-transparant btn-lg btn-block border-white text-white rounded-pill px-2 py-2 my-3"
           >
-            Bootcamp Kilat: Microsoft Excel
+            <div
+              class="d-flex flex-row align-items-center justify-content-between"
+            >
+              <div
+                class="rounded-circle overflow-hidden"
+                style="width: 46px; height: 46px; flex-shrink: 0"
+              ></div>
+              <div class="textdsc align-item-center">
+                Bootcamp Kilat: Microsoft Excel
+              </div>
+              <div>
+                <i class="threedots bi bi-three-dots-vertical"></i>
+              </div>
+            </div>
           </a>
         </div>
         <div>
           <a
             href="https://promo.harisenin.com/bookil/human-resources"
             target="_blank"
-            class="btn btn-transparant btn-lg btn-block border-white text-white rounded-pill px-3 py-3 mt-3"
+            class="btn btn-transparant btn-lg btn-block border-white text-white rounded-pill px-2 py-2 my-3"
           >
-            Bootcamp Kilat: Human Resources
+            <div
+              class="d-flex flex-row align-items-center justify-content-between"
+            >
+              <div
+                class="rounded-circle overflow-hidden"
+                style="width: 46px; height: 46px; flex-shrink: 0"
+              ></div>
+              <div class="textdsc align-item-center">
+                Bootcamp Kilat: Human Resources
+              </div>
+              <div>
+                <i class="threedots bi bi-three-dots-vertical"></i>
+              </div>
+            </div>
           </a>
         </div>
         <div>
           <a
             href="https://promo.harisenin.com/bookil/virtual-assistant"
             target="_blank"
-            class="btn btn-transparant btn-lg btn-block border-white text-white rounded-pill px-3 py-3 mt-3"
+            class="btn btn-transparant btn-lg btn-block border-white text-white rounded-pill px-2 py-2 my-3"
           >
-            Bootcamp Kilat: Virtual Assistant
+            <div
+              class="d-flex flex-row align-items-center justify-content-between"
+            >
+              <div
+                class="rounded-circle overflow-hidden"
+                style="width: 46px; height: 46px; flex-shrink: 0"
+              ></div>
+              <div class="textdsc align-item-center">
+                Bootcamp Kilat: Virtual Assistant
+              </div>
+              <div>
+                <i class="threedots bi bi-three-dots-vertical"></i>
+              </div>
+            </div>
           </a>
         </div>
-        <!-- // -->
+        <!-- CONTENT PILIHAN MINSE SECTION -->
         <div
           class="link-container-title text-center text-white font-weight-bold mt-4"
         >
           CONTENT PILIHAN MINSE! 🚀
         </div>
-        <div class="relative mt-3 rounded overflow-hidden" style="width: 600px">
+        <div
+          class="card relative mt-3 overflow-hidden border-0"
+          style="width: 600px; border-radius: 25px"
+        >
           <a href="https://www.youtube.com/watch?v=Tz0uBCqYViI" target="_blank">
             <img
+              class="card-img"
               src="./img-linktree/img-linktree-hariseninco.webp"
               alt="Harisenin Video"
               style="
@@ -255,14 +330,20 @@
               "
             />
             <div
-              class="absolute top-0 left-0 w-full px-4 py-3 text-white text-sm font-medium bg-black bg-opacity-50"
+              class="card-img-overlay text-white text-sm font-medium"
+              style="
+                margin-top: 150px;
+                background: linear-gradient(to bottom, #fffefe00, #000000);
+              "
             >
-              Ini Cara Gue Lebih Produktif Kerja Lewat 70% Of Rules | Work
-              Management
+              <div style="margin-top: 100px">
+                Ini Cara Gue Lebih Produktif Kerja Lewat 70% Of Rules | Work
+                Management
+              </div>
             </div>
           </a>
         </div>
-        <!-- // -->
+        <!-- PREPARE YOUR CAREER SECTION -->
         <div
           class="link-container-title text-center text-white font-weight-bold my-3"
         >
@@ -270,9 +351,9 @@
         </div>
         <div>
           <a
-            href="http://linktr.ee/promobootcamp"
+            href="https://www.youtube.com/watch?v=BTY5xL3cPRA"
             target="_blank"
-            class="btn btn-transparant btn-lg btn-block border-white text-white rounded-pill px-2 py-2 my-2"
+            class="btn btn-transparant btn-lg btn-block border-white text-white rounded-pill px-2 py-2 my-3"
           >
             <div
               class="d-flex flex-row align-items-center justify-content-between"
@@ -292,20 +373,20 @@
                   "
                 />
               </div>
-              <div class="align-item-center">
+              <div class="textdsc align-item-center">
                 Belajar Digital Marketing untuk Pemula!
               </div>
               <div>
-                <i class="bi bi-three-dots-vertical"></i>
+                <i class="threedots bi bi-three-dots-vertical"></i>
               </div>
             </div>
           </a>
         </div>
         <div>
           <a
-            href="http://linktr.ee/promobootcamp"
+            href="https://www.youtube.com/watch?v=a4uAFDhbZmA"
             target="_blank"
-            class="btn btn-transparant btn-lg btn-block border-white text-white rounded-pill px-2 py-2 my-2"
+            class="btn btn-transparant btn-lg btn-block border-white text-white rounded-pill px-2 py-2 my-3"
           >
             <div
               class="d-flex flex-row align-items-center justify-content-between"
@@ -325,20 +406,20 @@
                   "
                 />
               </div>
-              <div class="align-item-center">
+              <div class="textdsc align-item-center">
                 Audit dan Accounting, Apa Bedanya? Pahami Etikanya!
               </div>
               <div>
-                <i class="bi bi-three-dots-vertical"></i>
+                <i class="threedots bi bi-three-dots-vertical"></i>
               </div>
             </div>
           </a>
         </div>
         <div>
           <a
-            href="http://linktr.ee/promobootcamp"
+            href="https://www.youtube.com/watch?v=CRdJ2XQ8Lwg"
             target="_blank"
-            class="btn btn-transparant btn-lg btn-block border-white text-white rounded-pill px-2 py-2 my-2"
+            class="btn btn-transparant btn-lg btn-block border-white text-white rounded-pill px-2 py-2 my-3"
           >
             <div
               class="d-flex flex-row align-items-center justify-content-between"
@@ -358,21 +439,21 @@
                   "
                 />
               </div>
-              <div class="align-item-center">
+              <div class="textdsc align-item-center">
                 Belajar dari Nol Cara Jadi HR Profesional Meski Tanpa
                 Pengalaman!
               </div>
               <div>
-                <i class="bi bi-three-dots-vertical"></i>
+                <i class="threedots bi bi-three-dots-vertical"></i>
               </div>
             </div>
           </a>
         </div>
         <div>
           <a
-            href="http://linktr.ee/promobootcamp"
+            href="https://www.youtube.com/watch?v=ErOFOXyyGH4&t=3s"
             target="_blank"
-            class="btn btn-transparant btn-lg btn-block border-white text-white rounded-pill px-2 py-2 my-2"
+            class="btn btn-transparant btn-lg btn-block border-white text-white rounded-pill px-2 py-2 my-3"
           >
             <div
               class="d-flex flex-row align-items-center justify-content-between"
@@ -392,20 +473,20 @@
                   "
                 />
               </div>
-              <div class="align-item-center">
+              <div class="textdsc align-item-center">
                 Step By Step Memulai Karir Sebagai Web Developer!
               </div>
               <div>
-                <i class="bi bi-three-dots-vertical"></i>
+                <i class="threedots bi bi-three-dots-vertical"></i>
               </div>
             </div>
           </a>
         </div>
         <div>
           <a
-            href="http://linktr.ee/promobootcamp"
+            href="https://www.youtube.com/watch?v=5UFhwdpbhGk"
             target="_blank"
-            class="btn btn-transparant btn-lg btn-block border-white text-white rounded-pill px-2 py-2 my-2"
+            class="btn btn-transparant btn-lg btn-block border-white text-white rounded-pill px-2 py-2 my-3"
           >
             <div
               class="d-flex flex-row align-items-center justify-content-between"
@@ -425,21 +506,21 @@
                   "
                 />
               </div>
-              <div class="align-item-center">
+              <div class="textdsc align-item-center">
                 Cara Membuat CV Yang Menarik dan ATS Friendly (Update 2024).
                 GRATIS TEMPLATE!
               </div>
               <div>
-                <i class="bi bi-three-dots-vertical"></i>
+                <i class="threedots bi bi-three-dots-vertical"></i>
               </div>
             </div>
           </a>
         </div>
         <div>
           <a
-            href="http://linktr.ee/promobootcamp"
+            href="https://www.youtube.com/watch?v=ugI-8I8uMe0&t=1s"
             target="_blank"
-            class="btn btn-transparant btn-lg btn-block border-white text-white rounded-pill px-2 py-2 my-2"
+            class="btn btn-transparant btn-lg btn-block border-white text-white rounded-pill px-2 py-2 my-3"
           >
             <div
               class="d-flex flex-row align-items-center justify-content-between"
@@ -459,15 +540,180 @@
                   "
                 />
               </div>
-              <div class="align-item-center">
+              <div class="textdsc align-item-center">
                 Tips Melamar Kerja untuk Kamu yang Freshgraduate! (GRATIS
                 TEMPLATE CV & COVER LETTER!)
               </div>
               <div>
-                <i class="bi bi-three-dots-vertical"></i>
+                <i class="threedots bi bi-three-dots-vertical"></i>
               </div>
             </div>
           </a>
+        </div>
+        <!-- JOIN WITH US SECTION -->
+        <div
+          class="link-container-title text-center text-white font-weight-bold my-3"
+        >
+          JOIN WITH US!!✨
+        </div>
+        <div>
+          <a
+            href="https://bio.link/risecommunity"
+            target="_blank"
+            class="btn btn-transparant btn-lg btn-block border-white text-white rounded-pill px-2 py-2 my-3"
+          >
+            <div
+              class="d-flex flex-row align-items-center justify-content-between"
+            >
+              <div
+                class="rounded-circle overflow-hidden"
+                style="width: 46px; height: 46px; flex-shrink: 0"
+              ></div>
+              <div class="textdsc align-item-center">
+                Gabung Komunitas Harisenin
+              </div>
+              <div>
+                <i class="threedots bi bi-three-dots-vertical"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div>
+          <a
+            href="https://www.harisenin.com/school/bootcamp"
+            target="_blank"
+            class="btn btn-transparant btn-lg btn-block border-white text-white rounded-pill px-2 py-2 my-3"
+          >
+            <div
+              class="d-flex flex-row align-items-center justify-content-between"
+            >
+              <div
+                class="rounded-circle overflow-hidden"
+                style="width: 46px; height: 46px; flex-shrink: 0"
+              ></div>
+              <div class="textdsc align-item-center">
+                Intip Harisenin Bootcamp Yuk
+              </div>
+              <div>
+                <i class="threedots bi bi-three-dots-vertical"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div>
+          <a
+            href="https://www.harisenin.com/learning"
+            target="_blank"
+            class="btn btn-transparant btn-lg btn-block border-white text-white rounded-pill px-2 py-2 my-3"
+          >
+            <div
+              class="d-flex flex-row align-items-center justify-content-between"
+            >
+              <div
+                class="rounded-circle overflow-hidden"
+                style="width: 46px; height: 46px; flex-shrink: 0"
+              ></div>
+              <div class="textdsc align-item-center">
+                Video Course Harisenin
+              </div>
+              <div>
+                <i class="threedots bi bi-three-dots-vertical"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div>
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSdHBPfCnS3wOW0gwqX1T9I4eP7y64CPivxAnUTry7LhLWPkVQ/viewform?pli=1"
+            target="_blank"
+            class="btn btn-transparant btn-lg btn-block border-white text-white rounded-pill px-2 py-2 my-3"
+          >
+            <div
+              class="d-flex flex-row align-items-center justify-content-between"
+            >
+              <div
+                class="rounded-circle overflow-hidden"
+                style="width: 46px; height: 46px; flex-shrink: 0"
+              ></div>
+              <div class="textdsc align-item-center">
+                Kolaborasi Bareng Harisenin Yuk!
+              </div>
+              <div>
+                <i class="threedots bi bi-three-dots-vertical"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div>
+          <a
+            href="https://glints.com/id/en/companies/harisenincom/0c0d0296-5b77-4605-93e8-2369e491ac8f"
+            target="_blank"
+            class="btn btn-transparant btn-lg btn-block border-white text-white rounded-pill px-2 py-2 my-3"
+          >
+            <div
+              class="d-flex flex-row align-items-center justify-content-between"
+            >
+              <div
+                class="rounded-circle overflow-hidden"
+                style="width: 46px; height: 46px; flex-shrink: 0"
+              ></div>
+              <div class="textdsc align-item-center">
+                Kerja di Harisenin yuk!
+              </div>
+              <div>
+                <i class="threedots bi bi-three-dots-vertical"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div>
+          <a
+            href="https://tipssukses.harisenin.com/"
+            target="_blank"
+            class="btn btn-transparant btn-lg btn-block border-white text-white rounded-pill px-2 py-2 my-3"
+          >
+            <div
+              class="d-flex flex-row align-items-center justify-content-between"
+            >
+              <div
+                class="rounded-circle overflow-hidden"
+                style="width: 46px; height: 46px; flex-shrink: 0"
+              ></div>
+              <div class="textdsc align-item-center">Blog Harisenincom</div>
+              <div>
+                <i class="threedots bi bi-three-dots-vertical"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+        <!-- Join on hariseninco on linktree -->
+        <div class="mx-auto my-4" style="width: 265px">
+          <div>
+            <a
+              href="#"
+              target="_blank"
+              class="btn btn-lg btn-block border-white text-dark rounded-pill px-1 py-2 my-3"
+              style="background-color: #c4cbe5"
+            >
+              <div
+                class="d-flex flex-row align-items-center justify-content-center"
+              >
+                <div>
+                  <svg style="height: 24px; width: 24px">
+                    <path
+                      d="M13.5108 5.85343L17.5158 1.73642L19.8404 4.11701L15.6393 8.12199H21.5488V11.4268H15.6113L19.8404 15.5345L17.5158 17.8684L11.7744 12.099L6.03299 17.8684L3.70842 15.5438L7.93745 11.4361H2V8.12199H7.90944L3.70842 4.11701L6.03299 1.73642L10.038 5.85343V0H13.5108V5.85343ZM10.038 16.16H13.5108V24.0019H10.038V16.16Z"
+                      fill="#000000"
+                      class="cz-color-0"
+                      style="height: 15.36px; width: 16px"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="align-item-center font-weight-bolder">
+                  Join hariseninco on Linktree
+                </div>
+              </div>
+            </a>
+          </div>
         </div>
       </div>
     </div>
